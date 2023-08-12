@@ -1,5 +1,4 @@
 import "./App.css";
-
 function App() {
   return (
     <div className="App">
@@ -39,6 +38,7 @@ function App() {
         {/* home content end */}
 
         {/* book img gallery start */}
+
         <div className="bookGallery">
           <div className="slide1">
             <img src="/images/book1.png" />

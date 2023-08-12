@@ -1,3 +1,10 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  overflow-x: hidden;
+}
 .homeContainer {
   width: 1536px;
   background: url(../public/images/homeBg.png);
@@ -13,9 +20,19 @@
 .socialIcons {
   margin: auto 0px;
 }
+
 .socialIcons img:nth-child(1) {
   height: 24px;
   width: 13px;
+}
+.socialIcons img:nth-child(1):hover {
+  filter: invert(42%) sepia(65%) saturate(4266%) hue-rotate(206deg) brightness(94%) contrast(99%);
+}
+.socialIcons img:nth-child(2):hover {
+  filter: invert(69%) sepia(57%) saturate(4949%) hue-rotate(176deg) brightness(92%) contrast(106%);
+}
+.socialIcons img:nth-child(3):hover {
+  filter: invert(42%) sepia(84%) saturate(7206%) hue-rotate(200deg) brightness(88%) contrast(92%);
 }
 .socialIcons img:nth-child(2) {
   height: 24px;
@@ -66,6 +83,10 @@
   background-color: transparent;
   border: 2px solid #9b70f8;
   border-radius: 4px;
+}
+.homeContent button:hover{
+  transition: ease 2s all;
+  background: #9b70f8;
 }
 .bannerImg img {
   position: relative;
@@ -124,8 +145,6 @@
   text-align: right;
 }
 .detail img {
-  height: 350px;
-  width: 400px;
   border-radius: 12px;
 }
 .firstH2 {
