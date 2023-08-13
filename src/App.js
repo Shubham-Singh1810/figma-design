@@ -55,7 +55,7 @@ function App() {
       <div className="homeContainer">
         {showHomeLogo ? (
           <div className="brandLogoCenter">
-          <img src="/images/brandLogo.png" />
+          <img src="/images/loaderLogo.png" />
             </div>
         ) : (
           <>
@@ -125,11 +125,11 @@ function App() {
           <div className="footerContent my-auto">
             <h1>Download BookR</h1>
             <p> & Explore A Kingdom Of Books</p>
-            <div>
-              <img src="/images/playstore.png" />
-            </div>
-            <div>
+            <div className="playButton">
               <img src="/images/appstore.png" />
+            </div>
+            <div className="playButton">
+              <img src="/images/playstore.png" />
             </div>
           </div>
           <div>

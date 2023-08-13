@@ -18,9 +18,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-.brandLogoCenter img{
-  height: 150px;
-}
 .nav {
   padding: 46px 150px 0px 150px;
   display: flex;
@@ -155,6 +152,7 @@ body{
   font-weight: 700;
   line-height: 55px; /* 137.5% */
   text-transform: uppercase;
+  margin-top: 30px;
 }
 /* bookGallery end */
 
@@ -215,6 +213,11 @@ body{
 }
 .footerContent img:last-child{
   margin-top: 30px;
+}
+.playButton:hover{
+  scale: 1.1;
+  margin-left: 25px;
+  transition: ease-in .5s;
 }
 
 /* footer end */
