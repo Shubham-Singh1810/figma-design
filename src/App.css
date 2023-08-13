@@ -11,6 +11,16 @@ body{
   height: 722px;
   flex-shrink: 0;
 }
+.brandLogoCenter{
+  height: 100vh;
+  background:#181C28;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brandLogoCenter img{
+  height: 150px;
+}
 .nav {
   padding: 46px 150px 0px 150px;
   display: flex;
@@ -46,7 +56,7 @@ body{
 
 /* homeContent start */
 .homeContent {
-  padding: 60px 150px;
+  padding: 0px 150px;
 }
 .homeContent h1 {
   color: var(--text-white, #f8f8f8);
@@ -84,34 +94,58 @@ body{
   border: 2px solid #9b70f8;
   border-radius: 4px;
 }
+
+ 
 .homeContent button:hover{
   transition: ease 2s all;
   background: #9b70f8;
 }
-.bannerImg img {
+
+.headers{
+  padding: 60px 0px;
   position: relative;
-  top: -100px;
-  left: 150px;
+  animation: slide 1s ease-in;
+}
+@keyframes slide {
+  0%{
+    left: -800px;
+  } 
+  100%{
+    left: 0px;
+  }
+}
+.bannerImg img{
+  margin-top: -50px;
+  position: relative;
+  right: -150px;
+  animation: imgSlide 1s ease-in;
+}
+@keyframes imgSlide {
+  0%{
+    right: -800px;
+  } 
+  100%{
+    right: -150px;
+  }
 }
 /* homeContent end */
 
 /* bookGallery start */
-.bookGallery {
-  margin-top: -200px;
+
+.Slide{
+  display: flex;
+  overflow: auto;
 }
-.bookGallery img {
-  margin: 30px 0px;
+.Slide::-webkit-scrollbar{
+  display: none;
 }
-.slide1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 20px;
+.Slide img{
+  margin: 30px 20px;
 }
-.slide2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 20px;
+.Slide img:first-child{
+  margin-left: 0px;
 }
+
 .bookGallery h1 {
   text-align: center;
   color: #232323;

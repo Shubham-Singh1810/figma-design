@@ -1,66 +1,101 @@
 import "./App.css";
+import {useState, useEffect} from "react"; 
+import ImageCrasoal from "./component/ImageCrasoal";
+
 function App() {
+  const [showHomeLogo,setShowHomeLogo]=useState(true)
+  useEffect(()=>{
+    setTimeout(()=>{
+     setShowHomeLogo(false);
+    },1500)
+  },[])
+  const slideOneImage = [
+    "/images/book1.png",
+    "/images/book2.png",
+    "/images/book3.png",
+    "/images/book4.png",
+    "/images/book5.png",
+    "/images/book6.png",
+    "/images/book7.png",
+    "/images/book8.png",
+    "/images/book9.png",
+    "/images/book10.png",
+    "/images/book11.png",
+    "/images/book12.png",
+    "/images/book13.png",
+    "/images/book14.png",
+    "/images/book15.png",
+    "/images/book16.png",    
+  ]
+  const slideTwoImage = [
+    "/images/book16.png",
+    "/images/book15.png",
+    "/images/book14.png",
+    "/images/book13.png",
+    "/images/book12.png",
+    "/images/book11.png",
+    "/images/book10.png",
+    "/images/book9.png",
+    "/images/book8.png",
+    "/images/book7.png",
+    "/images/book6.png",
+    "/images/book5.png",
+    "/images/book4.png",
+    "/images/book3.png",
+    "/images/book2.png",
+    "/images/book1.png",    
+  ]
   return (
     <div className="App">
       {/* home start */}
       <div className="homeContainer">
-        {/* nav Start */}
-        <nav className="nav">
-          <div className="brand">
-            <img src="/images/brandLogo.png" />
-          </div>
-          <div className="d-flex socialIcons">
-            <img src="/images/f.png" />
-            <img src="/images/twitter.png" />
-            <img src="/images/linked_in.png" />
-          </div>
-        </nav>
-        {/* nav end*/}
+        {showHomeLogo ? (
+          <div className="brandLogoCenter">
+          <img src="/images/brandLogo.png" />
+            </div>
+        ) : (
+          <>
+            {/* nav Start */}
+            <nav className="nav">
+              <div className="brand">
+                <img src="/images/brandLogo.png" />
+              </div>
+              <div className="d-flex socialIcons">
+                <img src="/images/f.png" />
+                <img src="/images/twitter.png" />
+                <img src="/images/linked_in.png" />
+              </div>
+            </nav>
+            {/* nav end*/}
 
-        {/* home content start */}
-        <div className="homeContent d-flex">
-          <div className="headers">
-            <h1 className="mb-0">Discover a World of Books with BookR!</h1>
-            <p className="p1">
-              Are you a passionate book lover? Do you enjoy immersing yourself in captivating stories and
-              thought-provoking ideas?
-            </p>
-            <p className="p2">
-              Look no further! Introducing BookR, the ultimate book sharing app designed to connect book enthusiasts
-              like you!
-            </p>
-            <button>DOWNLOAD THE APP NOW</button>
-          </div>
-          <div className="bannerImg">
-            <img src="/images/mobilePic.png" />
-          </div>
-        </div>
-        {/* home content end */}
+            {/* home content start */}
+            <div className="homeContent d-flex">
+              <div className="headers">
+                <h1 className="mb-0">Discover a World of Books with BookR!</h1>
+                <p className="p1">
+                  Are you a passionate book lover? Do you enjoy immersing yourself in captivating stories and
+                  thought-provoking ideas?
+                </p>
+                <p className="p2">
+                  Look no further! Introducing BookR, the ultimate book sharing app designed to connect book enthusiasts
+                  like you!
+                </p>
+                <button>DOWNLOAD THE APP NOW</button>
+              </div>
+              <div className="bannerImg">
+                <img src="/images/mobilePic.png" />
+              </div>
+            </div>
+            {/* home content end */}
+          </>
+        )}
 
         {/* book img gallery start */}
-
+        
         <div className="bookGallery">
-          <div className="slide1">
-            <img src="/images/book1.png" />
-            <img src="/images/book2.png" />
-            <img src="/images/book3.png" />
-            <img src="/images/book4.png" />
-            <img src="/images/book5.png" />
-            <img src="/images/book6.png" />
-            <img src="/images/book7.png" />
-            <img src="/images/book8.png" />
-          </div>
+          <ImageCrasoal imageArr={slideOneImage}/>
           <h1>AN EVER EXPANDING LIBRARY</h1>
-          <div className="slide1">
-            <img src="/images/book9.png" />
-            <img src="/images/book10.png" />
-            <img src="/images/book11.png" />
-            <img src="/images/book12.png" />
-            <img src="/images/book13.png" />
-            <img src="/images/book14.png" />
-            <img src="/images/book15.png" />
-            <img src="/images/book16.png" />
-          </div>
+          <ImageCrasoal imageArr={slideTwoImage}/>
         </div>
         {/* book img gallery end */}
 
