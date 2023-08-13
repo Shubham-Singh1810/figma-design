@@ -235,3 +235,61 @@ line-height: normal;
 margin-bottom: 0px;
 }
 /* copyRight start */
+
+/* banner css start */
+
+/* img {
+  max-width: 150px;
+  height: 5rem;
+  padding: 0 15px;
+  object-fit: cover;
+}
+
+img:last-of-type {
+  padding-left: 0;
+} */
+
+.inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 240px;
+}
+.image{
+  margin: 30px 20px;
+}
+.wrapper {
+  position: absolute;
+  display: flex;
+}
+
+.leftSlide {
+  display: flex;
+  animation: swipeleft var(--speed) linear infinite backwards;
+}
+
+@keyframes swipeleft {
+  0% {
+    transform: translate(0%);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
+.rightSlide {
+  display: flex;
+  animation: swiperight var(--speed) linear infinite forwards;
+}
+
+@keyframes swiperight {
+  0% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(0%);
+  }
+}
+
+/* banner css end */

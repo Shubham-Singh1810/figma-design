@@ -1,6 +1,7 @@
 import "./App.css";
 import {useState, useEffect} from "react"; 
-import ImageCrasoal from "./component/ImageCrasoal";
+import ImageCrasoal from "./component/Banner";
+import Banner from "./component/Banner";
 
 function App() {
   const [showHomeLogo,setShowHomeLogo]=useState(true)
@@ -27,7 +28,7 @@ function App() {
     "/images/book15.png",
     "/images/book16.png",    
   ]
-  const slideTwoImage = [
+  const images = [
     "/images/book16.png",
     "/images/book15.png",
     "/images/book14.png",
@@ -44,7 +45,10 @@ function App() {
     "/images/book3.png",
     "/images/book2.png",
     "/images/book1.png",    
-  ]
+  ].map((image) => ({
+    id: crypto.randomUUID(),
+    image
+  }));
   return (
     <div className="App">
       {/* home start */}
@@ -93,9 +97,9 @@ function App() {
         {/* book img gallery start */}
         
         <div className="bookGallery">
-          <ImageCrasoal imageArr={slideOneImage}/>
+          <Banner images={images} speed={12000} slideType={"leftSlide"}/>
           <h1>AN EVER EXPANDING LIBRARY</h1>
-          <ImageCrasoal imageArr={slideTwoImage}/>
+          <Banner images={images} speed={12000} slideType={"rightSlide"}/>
         </div>
         {/* book img gallery end */}
 
