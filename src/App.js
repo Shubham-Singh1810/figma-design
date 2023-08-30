@@ -104,7 +104,7 @@ function App() {
         {/* book img gallery end */}
 
         {/* detail start1 */}
-        <div className="d-flex justify-content-between detail">
+        <div className="d-flex justify-content-around detail">
           <img src="/images/detail1.png" />
           <div className="m-auto">
             <h1 className="firstH1">MEET FELLOW ETHUSIASTS & FORM BOOK CLUBS</h1>
@@ -112,7 +112,7 @@ function App() {
         </div>
         {/* detail end */}
         {/* detail start1 */}
-        <div className="d-flex justify-content-between detail">
+        <div className="d-flex justify-content-around detail">
           <div className="m-auto">
             <h1 className="firstH2">ORDER OR SHARE BOOKS SAFE DELIVERY ASSURED</h1>
           </div>
